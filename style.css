@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #dfdfdf; /* slightly off-white */
+    color: #333;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* visible shadow */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.book-btn {
+    background: #111;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background: #444;
+}
+
+/* Landing Section */
+.landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   /* vertical centering */
+    min-height: 80vh;      /* fills most of viewport */
+    padding: 0 50px;
+}
+
+.punchline {
+    width: 50%;            /* half width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical center */
+    align-items: flex-start;  /* left align */
+    padding-right: 40px;
+}
+
+.punchline h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.punchline p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Carousel */
+.carousel {
+    width: 50%;            /* half width */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    height: 400px;         /* fixed height for consistency */
+}
+
+.carousel-container {
+    display: flex;
+    animation: slide 12s infinite;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* keeps ratio, crops edges if needed */
+    flex-shrink: 0;
+}
+
+/* Simple sliding animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 50px;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #555;
+}
+
+/* Hover effect for features */
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 50px;
+    background: linear-gradient(to right, #f9f9f9, #eaeaea);
+    border-top: 1px solid #eee;
+    flex-wrap: nowrap;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: #555;
+}
+
+/* Highlight effect on hover */
+.site-footer:hover {
+    background: linear-gradient(to right, #eaeaea, #dcdcdc); /* darker fade */
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15); /* subtle glow */
+}
